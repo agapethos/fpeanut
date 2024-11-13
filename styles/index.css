@@ -14,7 +14,8 @@ body {
   margin: auto;
   width: 100%;
   list-style: none;
-  background: rgba(255, 255, 255, 0.7);
+  background: #fff;
+  border-bottom: solid whitesmoke thick;
   text-align: center;
 }
 li {
@@ -24,7 +25,7 @@ li {
   margin-inline: 30px;
 }
 .h-link {
-  color: black;
+  color: grey;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 24px;
@@ -34,7 +35,7 @@ li:hover {
 }
 .h-link:hover {
   transition: 0.2s;
-  color: #fff;
+  color: #16a085;
 }
 
 .container {
@@ -55,11 +56,11 @@ li:hover {
   position: absolute;
   right: -100%;
   height: 100vh;
-  width: 30%;
+  width: 40%;
   border: none;
   border-right: solid transparent;
   border-radius: 8px;
-  animation: pogEnter 7s ease-in-out forwards;
+  animation: pogEnter 4s ease-in-out forwards;
 }
 
 @keyframes pogEnter {
@@ -73,27 +74,28 @@ li:hover {
 
 #left h1 {
   padding: 50px;
+  color: #16a085;
 }
 #f {
-  font-size: 75px;
-  position: absolute;
-  left: -100%;
-  top:10%;
-  animation: fEnter 1s ease-in-out forwards;
-}
-#for {
   font-size: 100px;
   position: absolute;
   left: -100%;
-  top: 30%;
-  animation: forEnter 1s ease-in-out forwards 1s;
+  top: 10%;
+  animation: fEnter .5s ease-in-out forwards;
 }
-#peanut {
-  font-size: 150px;
+#for {
+  font-size: 125px;
   position: absolute;
   left: -100%;
-  top:50%;
-  animation: peanutEnter 1s ease-in-out forwards 3s;
+  top: 30%;
+  animation: forEnter .3s ease-in-out forwards .5s;
+}
+#peanut {
+  font-size: 175px;
+  position: absolute;
+  left: -100%;
+  top: 50%;
+  animation: peanutEnter 1s ease-in-out forwards 0.8s;
 }
 
 @keyframes fEnter {
