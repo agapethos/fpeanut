@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  min-width: 550px;
+  display: table;
+  background-color: #ececec;
+}
+#header {
+  height: 48px;
+  margin: auto;
+  width: 100%;
+  list-style: none;
+  background: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+li {
+  transition: 0.2s;
+  display: inline-block;
+  margin-top: 8px;
+  margin-inline: 30px;
+}
+.h-link {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+li:hover {
+  transform: scale(1.2);
+}
+.h-link:hover {
+  transition: 0.2s;
+  color: #fff;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  background: url(../resources/leaves.jpg);
+  background-position: center;
+  background-repeat: repeat;
+}
+
+#right {
+  scroll-margin-left: inherit;
+  background: url("../resources/peanut.png");
+  background-position: 23%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  right: -100%;
+  height: 100vh;
+  width: 30%;
+  border: none;
+  border-right: solid transparent;
+  border-radius: 8px;
+  animation: pogEnter 7s ease-in-out forwards;
+}
+
+@keyframes pogEnter {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+#left h1 {
+  padding: 50px;
+}
+#f {
+  font-size: 75px;
+  position: absolute;
+  left: -100%;
+  top:10%;
+  animation: fEnter 1s ease-in-out forwards;
+}
+#for {
+  font-size: 100px;
+  position: absolute;
+  left: -100%;
+  top: 30%;
+  animation: forEnter 1s ease-in-out forwards 1s;
+}
+#peanut {
+  font-size: 150px;
+  position: absolute;
+  left: -100%;
+  top:50%;
+  animation: peanutEnter 1s ease-in-out forwards 3s;
+}
+
+@keyframes fEnter {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 30px;
+  }
+}
+@keyframes forEnter {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 30px;
+  }
+}
+@keyframes peanutEnter {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 30px;
+  }
+}
