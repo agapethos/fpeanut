@@ -1,3 +1,57 @@
+*{
+    margin:0;
+    padding:0;
+
+  }
+#header {
+    height: 48px;
+    margin: auto;
+    width: 100%;
+    list-style: none;
+    background: #fff;
+    border-bottom: solid whitesmoke thick;
+    text-align: center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:1rem;
+  }
+  li {
+    transition: 0.2s;
+    display: inline-block;
+    margin-top: 8px;
+    margin-inline: 1.5rem;
+   
+  }
+  .h-link {
+    color: grey;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 24px;
+  }
+  li:hover {
+    transform: scale(1.2);
+  }
+  .h-link:hover {
+    transition: 0.2s;
+    color: #16a085;
+  }
+  .container {
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+    background: url(../resources/leaves.jpg);
+    background-position: center;
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    gap: 2rem;
+    @media screen and (max-width:500px){
+      gap:0;
+    }
+  }
 .carrousel{
     width:37.5vw;
     height:50vh;
@@ -35,6 +89,7 @@
     width:55%;
     position: relative;
     overflow: hidden;
+    margin-left:3.25rem;
 
     @media screen and (max-width: 500px) {
         width: 80%;
@@ -123,3 +178,47 @@ img{
 .dot.active {
     background: white;
 }
+
+.buttonDiv{
+    position:absolute;
+    left:calc(50vw - 35px);
+    top:85vh;
+    border:2px solid #3f7652;
+    width:70px;
+    height:50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:30px;
+    background: #16a085;
+    color: white;
+    transition:all 0.3s ease;
+    &:hover {
+        cursor: pointer;
+        transform:translateY(-5px);
+        transform:scale(1.1);
+        filter:brightness(1.1);
+    }
+    
+}
+@media screen and (max-width: 768px) {
+    #header {
+      height: 40px;
+    }
+    li {
+      margin-top: 6px;
+    }
+    .h-link {
+      font-size: 18px;
+    }
+    #right {
+      visibility: hidden;
+      display: none;
+    }
+    #left h1 {
+      font-size: 100px;
+    }
+
+  }
+
+  

@@ -4,42 +4,76 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modal JavaScript</title>
+    <title>F for Peanut</title>
     <link rel="stylesheet" href="../styles/causa.css" />
-    <script src="../scripts/causa.js" defer></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Oi&family=Rubik+Glitch&family=Teko:wght@300..700&family=Tilt+Prism&display=swap");
+    </style>
   </head>
   <body>
     <nav>
       <ul id="header">
-        <li><a href="../index.html" class="h-link">Inicio</a></li>
+        <li><a href="../index.html" class="h-link">Início</a></li>
         <li><a href="" class="h-link">Causa</a></li>
         <li><a href="../pages/homenagem.html" class="h-link">Homenagear</a></li>
       </ul>
     </nav>
     <div class="container">
-      <h1>JavaScript Modal</h1>
-      <button id="open-modal">Abrir</button>
-      <div id="fade" class="hide"></div>
-      <div id="modal" class="hide">
-        <div class="modal-header">
-          <h2>Este é o Modal</h2>
-          <button id="close-modal">Fechar</button>
+      <div class="containerModal">
+        <h1 id="origem">Origem</h1>
+        <button id="open-modal">Abrir</button>
+        <div id="fade" class="hide"></div>
+        <div id="modal" class="hide">
+          <div class="modal-header">
+            <h2>Origem</h2>
+            <button id="close-modal">Fechar</button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Peanut, o esquilo, foi um charmoso esquilo-cinzento, conhecido por
+              suas travessuras e personalidade única. Resgatado por Mark Longo,
+              ainda filhote, após cair de uma árvore, Peanut rapidamente se
+              adaptou à vida com o humano, tornando-se uma sensação na internet
+              a mais de 7 anos. Sua natureza curiosa e amigável se destaca em
+              vídeos onde ele interage com diversos objetos, faz truques e até
+              usa roupinhas fofas.
+            </p>
+            <p>
+              Peanut possuia mais de 911 mil seguidores no Instagram. Sua
+              popularidade ajudou na criação da organização sem fins lucrativos
+              Longo's P'Nuts Freedom Farm Animal Sanctuary, que resgata animais
+              negligenciados.
+            </p>
+          </div>
         </div>
-        <div class="modal-body">
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, quam?
-            Quas accusantium id cupiditate iste veritatis repudiandae odio
-            dolore voluptas. Eum, deserunt quod. Sit similique laudantium
-            assumenda repellat vel necessitatibus.
-          </p>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius alias
-            voluptate doloremque, totam inventore autem quis non error! Earum
-            ullam fuga, officiis voluptates pariatur unde et adipisci ducimus
-            non obcaecati.
-          </p>
+        <div class="containerModal">
+          <h1 id="desfecho">Desfecho</h1>
+          <button id="open-modal-2">Abrir</button>
+        </div>
+        <div id="fade-2" class="hide"></div>
+        <div id="modal-2" class="hide">
+          <div class="modal-header">
+            <h2>Desfecho</h2>
+            <button id="close-modal-2">Fechar</button>
+          </div>
+          <div class="modal-body">
+            <p>
+              No dia 30 de outubro de 2024, Peanut é morto por agentes
+              licenciados de reabilitação da vida selvagem do estado americano,
+              que alegaram a Mark Longo mantinha vida selvagem ilegalmente.
+            </p>
+            <p>
+              Os agente invadiram a casa de Mark e tomaram o esquilo, que mais
+              tarde foi morto sobre a justificativa de eutanásia por risco de
+              contamição por raiva. Acontece que, esquilos-cinzentos nem
+              transmissores dessa doença são, marcando uma série de injustiças e
+              incompetências do governo dos Estados Unidos.
+            </p>
+          </div>
         </div>
       </div>
+      <h1 id="justica">Justiça por P-Nut!</h1>
     </div>
+    <script src="../scripts/causa.js"></script>
   </body>
 </html>

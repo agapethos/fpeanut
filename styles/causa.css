@@ -1,7 +1,6 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+*{
+  margin:0;
+  padding:0;
 }
 #header {
   height: 48px;
@@ -11,12 +10,16 @@
   background: #fff;
   border-bottom: solid whitesmoke thick;
   text-align: center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:1rem;
 }
 li {
   transition: 0.2s;
   display: inline-block;
   margin-top: 8px;
-  margin-inline: 30px;
+  margin-inline: 1.5rem;
 }
 .h-link {
   color: grey;
@@ -39,33 +42,44 @@ li:hover {
   background: url(../resources/leaves.jpg);
   background-position: center;
   background-repeat: repeat;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-start;
-  align-items:center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  gap: 2rem;
+  @media screen and (max-width:500px){
+    gap:0;
+  }
 }
 
 h1 {
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 button {
-  padding: 0.6rem 1.2rem;
+  padding: 0.8rem 2rem;
   background-color: #888;
   color: #fff;
   border: none;
-  border-radius: 0.25rem;
+  border-radius: 8px;
   cursor: pointer;
-  opacity: 0.9;
   font-size: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-#open-modal {
-  background-color: #007bff;
+#open-modal, #open-modal-2 {
+  background: #3f7652;
+  margin-top: 1rem;
 }
 
 button:hover {
-  opacity: 1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #fade {
@@ -120,13 +134,75 @@ button:hover {
 #modal.hide {
   top: 0;
 }
+/* Styles for second modal */
+#fade-2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+}
+
+#modal-2 {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  max-width: 90%;
+  background-color: #fff;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  z-index: 10;
+}
+
+#fade-2,
+#modal-2 {
+  transition: 0.5s;
+  opacity: 1;
+  pointer-events: all;
+}
+
+#modal-2.hide,
+#fade-2.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#modal-2.hide {
+  top: 0;
+}
+
+.containerModal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem;
+}
+
+#justica{
+  font-size: 120px;
+  font-family: "teko";
+  color: #3f7652;
+  text-align:center;
+  margin-top:4rem;
+  @media screen and (max-width:500px){
+    font-size:45px;
+    margin-top: 8rem;
+  }
+}
 @media screen and (max-width: 768px) {
   #header {
     height: 40px;
   }
   li {
     margin-top: 6px;
-    margin-inline: 14px;
+    margin-inline: 1rem;
   }
   .h-link {
     font-size: 18px;
@@ -138,6 +214,28 @@ button:hover {
   #left h1 {
     font-size: 100px;
   }
+}
+#desfecho{
+  @media screen and (max-width:500px){
+    margin-top:5rem;
+  }
+}
+#origem{
+  @media screen and (max-width:500px){
+    margin-top:3rem;
+  }
+}
 
+@media screen and (max-width: 500px) {
+  .containerModal {
+    padding: 1rem;
+  }
   
+  h1 {
+    font-size: 2rem;
+  }
+  
+  button {
+    padding: 0.6rem 1.5rem;
+  }
 }
