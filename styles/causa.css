@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#header {
+  height: 48px;
+  margin: auto;
+  width: 100%;
+  list-style: none;
+  background: #fff;
+  border-bottom: solid whitesmoke thick;
+  text-align: center;
+}
+li {
+  transition: 0.2s;
+  display: inline-block;
+  margin-top: 8px;
+  margin-inline: 30px;
+}
+.h-link {
+  color: grey;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+li:hover {
+  transform: scale(1.2);
+}
+.h-link:hover {
+  transition: 0.2s;
+  color: #16a085;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  background: url(../resources/leaves.jpg);
+  background-position: center;
+  background-repeat: repeat;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  align-items:center;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 0.6rem 1.2rem;
+  background-color: #888;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  opacity: 0.9;
+  font-size: 1rem;
+}
+
+#open-modal {
+  background-color: #007bff;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+#fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+}
+
+#modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  max-width: 90%;
+  background-color: #fff;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  z-index: 10;
+}
+
+#fade,
+#modal {
+  transition: 0.5s;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+.modal-body p {
+  margin-bottom: 1rem;
+}
+
+#modal.hide,
+#fade.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#modal.hide {
+  top: 0;
+}
+@media screen and (max-width: 768px) {
+  #header {
+    height: 40px;
+  }
+  li {
+    margin-top: 6px;
+    margin-inline: 14px;
+  }
+  .h-link {
+    font-size: 18px;
+  }
+  #right {
+    visibility: hidden;
+    display: none;
+  }
+  #left h1 {
+    font-size: 100px;
+  }
+
+  
+}

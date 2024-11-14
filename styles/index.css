@@ -3,8 +3,8 @@
   padding: 0;
 }
 body {
-  height: 100vh;
-  width: 100%;
+  height: 100%;
+  width: 100dvw;
   display: table;
   background-color: #ececec;
 }
@@ -44,6 +44,13 @@ li:hover {
   background: url(../resources/leaves.jpg);
   background-position: center;
   background-repeat: repeat;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  align-items:center;
+  @media screen and (max-width:768px){
+    height:120vh;
+  }
 }
 
 #right {
@@ -97,7 +104,21 @@ li:hover {
   top: 50%;
   animation: peanutEnter 1s ease-in-out forwards 0.8s;
 }
-
+.imagemCelular{
+  display:none;
+  
+  @media screen and (max-width:768px){
+    display:block;
+    position:absolute;
+    top:90%;
+    left:10%;
+  }
+}
+#peanutCelular{
+  width:90%;
+  border-radius:50px;
+  object-fit:fill;
+}
 @keyframes fEnter {
   0% {
     left: -100%;
@@ -127,30 +148,20 @@ li:hover {
   #header {
     height: 40px;
   }
-}
-@media screen and (max-width: 768px) {
   li {
     margin-top: 6px;
     margin-inline: 14px;
   }
-}
-@media screen and (max-width: 768px) {
   .h-link {
     font-size: 18px;
   }
-}
-@media screen and (max-width: 768px) {
   #right {
     visibility: hidden;
     display: none;
   }
-}
-@media screen and (max-width: 768px) {
   #left h1 {
     font-size: 100px;
   }
-}
-@media screen and (max-width: 768px) {
   @keyframes fEnter {
     0% {
       left: -100%;
@@ -159,8 +170,6 @@ li:hover {
       left: 110px;
     }
   }
-}
-@media screen and (max-width: 768px) {
   @keyframes forEnter {
     0% {
       left: -100%;
@@ -169,8 +178,6 @@ li:hover {
       left: 65px;
     }
   }
-}
-@media screen and (max-width: 768px) {
   @keyframes peanutEnter {
     0% {
       left: -100%;
@@ -180,3 +187,5 @@ li:hover {
     }
   }
 }
+
+
